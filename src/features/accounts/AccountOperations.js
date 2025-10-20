@@ -33,6 +33,8 @@ function AccountOperations() {
 
   function handleRequestLoan() {
     if (!loanAmount || !loanPurpose) return;
+    //Solution 2 if we do not need to use prepare
+    // dispatch(requestLoan({loanAmount, loanPurpose}));
     dispatch(requestLoan(loanAmount, loanPurpose));
     setLoanAmount("");
     setLoanPurpose("");
